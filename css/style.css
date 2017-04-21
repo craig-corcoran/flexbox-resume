@@ -18,6 +18,12 @@ a {
     text-decoration: none;
 }
 
+/* mouse over link */
+a:hover {
+    color: blue;
+}
+
+
 :root {
   --pad: 0.5vw;
   --line-color: rgb(200, 200, 200);
@@ -26,10 +32,16 @@ a {
   --subtitle-size: 15px;
   --large-pad: 4vw;
   --h-margin: 8vw;
-  --v-margin: 1.5vw;
+  --v-margin: 1vw;
   --indent: 2vw;
   --img-margin: 4vw;  /* margin between skill images */
   --header-size: 8vw;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 
 .grid {
@@ -48,11 +60,6 @@ a {
   flex-grow: 1;
 }
 
-.h-line {
-  border-top: var(--line-width) solid var(--line-color);
-  margin: var(--v-margin) var(--h-margin);
-}
-
 .v-line {
   border-left: var(--line-width) solid var(--line-color);
   margin: 2vw var(--img-margin);
@@ -64,17 +71,18 @@ a {
 }
 
 .resume {
-  width: 100vw;
-  height: 130vw;
+  margin: var(--v-margin) var(--h-margin);
+  min-width: 50vh;
+  min-height: 65vw;
+  max-width: 120vh;
 }
 
 .footer {
-  margin: 0 var(--h-margin);
+  margin-top: calc(2*var(--v-margin));
 }
 
 .header {
   align-items: center;
-  margin: 0 var(--h-margin);
 }
 
 .pic {
@@ -89,18 +97,18 @@ a {
 }
 
 .subheader {
-  justify-content:flex-start;
-  margin: var(--v-margin) var(--h-margin);
+  margin: var(--v-margin) 0;
 }
 
 .mission {
   margin: 0 var(--indent);
   align-items: center;
   text-align: justify;
+  /*padding: 0 var(--indent);*/
+  /*border-left: var(--line-width) solid var(--line-color);*/
 }
 
 .infogrid {
-  /*font-size:*/
   grid-template-columns: auto;
   grid-template-areas:
     "info1"
@@ -109,10 +117,8 @@ a {
     "info4";
 }
 
-
 .info {
-  /*margin: 0.5vh 0.5vw;*/
-  font-size: 2vw;
+  font-size: 0.9em;
   align-items: center;
 }
 
@@ -131,7 +137,6 @@ a {
 
 .info3 {
   grid-area: info3;
-  margin-right: 2vw;
 }
 
 .info4 {
@@ -139,7 +144,7 @@ a {
 }
 
 .skills-section {
-  margin: var(--v-margin) var(--h-margin);
+  margin: var(--v-margin) 0;
 }
 
 .section-title {
@@ -183,7 +188,7 @@ a {
 }
 
 .experience-section {
-  margin: 0 var(--h-margin);
+  /*margin: 0 var(--h-margin);*/
   /*border: 0.2vw solid gray;*/
 }
 
